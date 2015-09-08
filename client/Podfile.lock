@@ -1,0 +1,21 @@
+PODS:
+  - IMFCore (1.0.0)
+  - OrigamiEngine (1.0.14):
+    - OrigamiEngine/Core (= 1.0.14)
+  - OrigamiEngine/Core (1.0.14)
+  - OrigamiEngine/Flac (1.0.14):
+    - OrigamiEngine/Core
+  - OrigamiEngine/Opus (1.0.14):
+    - OrigamiEngine/Core
+
+DEPENDENCIES:
+  - IMFCore
+  - OrigamiEngine
+  - OrigamiEngine/Flac
+  - OrigamiEngine/Opus
+
+SPEC CHECKSUMS:
+  IMFCore: 658ca8f27f1dade28abe6dcb263969d382a71da7
+  OrigamiEngine: 74b097326260597f1498790795cc2cdd604c199a
+
+COCOAPODS: 0.35.0
