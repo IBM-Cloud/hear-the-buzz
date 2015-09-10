@@ -10,14 +10,14 @@
 	<string>hear-the-buzz</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>7D467C0257C8743423472B91895A8EB00F3FF535</key>
+		<key>167C5CCBFEA503F8862331479B6256762B207880</key>
 		<string>https://hub.jazz.net/git/nheidloff/hear-the-buzz</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>client/hear-the-buzz.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>7D467C0257C8743423472B91895A8EB00F3FF535</key>
+		<key>167C5CCBFEA503F8862331479B6256762B207880</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>7D467C0257C8743423472B91895A8EB00F3FF535</string>
+	<string>167C5CCBFEA503F8862331479B6256762B207880</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>7D467C0257C8743423472B91895A8EB00F3FF535</string>
+			<string>167C5CCBFEA503F8862331479B6256762B207880</string>
 			<key>IDESourceControlWCCName</key>
 			<string>hear-the-buzz</string>
 		</dict>

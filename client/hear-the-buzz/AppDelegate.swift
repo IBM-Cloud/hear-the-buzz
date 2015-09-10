@@ -41,5 +41,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
     }
+    
+    var topic:String = "bluemix"
+    
+    func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]!, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        
+        var sentimentObject: AnyObject? = userInfo["sentiment"]
+        var topicObject: AnyObject? = userInfo["topic"]
+        if sentimentObject != nil {
+            var sentimentString = sentimentObject as! String
+            let viewModel = ViewModel()
+            viewModel.sentiment = sentimentString
+            viewModel.topic = self.topic
+        
+            viewModel.fetchTweets {
+                dispatch_async(dispatch_get_main_queue()) {
+                    var output = Dictionary<String,String>()
+                    var tweets:[Tweet]? = viewModel.tweetsData
+                
+                    if (tweets != nil) {
+                        var tweetsData:[Tweet] = tweets!
+                        for (var i = 0; i < tweetsData.count; i++) {
+                            let number = i as NSNumber
+                            output["tweet" + number.stringValue + ".authorName"] = tweetsData[i].authorName
+                            
+                            var message = tweetsData[i].message
+                            if message.lowercaseString.rangeOfString("http") != nil {
+                                var index = message.rangeOfString("http")?.startIndex
+                                message = message.substringToIndex(index!)
+                            }
+                            if message.lowercaseString.rangeOfString("https") != nil {
+                                var index = message.rangeOfString("https")?.startIndex
+                                message = message.substringToIndex(index!)
+                            }
+                            output["tweet" + number.stringValue + ".message"] = message
+                        }
+                    }
+                    output["topic"] = self.topic
+                    reply(output)
+                }
+            }
+        }
+        if topicObject != nil {
+            var output = Dictionary<String,String>()
+            output["topic"] = self.topic
+            reply(output)
+        }
+    }
 }
 

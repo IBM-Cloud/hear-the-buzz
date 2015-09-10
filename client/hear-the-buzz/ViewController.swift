@@ -22,6 +22,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var topic: UITextField!
     
+    @IBAction func topicChanged(sender: AnyObject) {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        var newTopic = topic.text
+        appDelegate.topic = newTopic
+    }
+    
     @IBAction func clearText(sender: AnyObject) {
         topic.text = ""
     }
