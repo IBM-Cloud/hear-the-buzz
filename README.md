@@ -21,6 +21,8 @@ Technically [IBM Bluemix](https://bluemix.net) is used to host the backend funct
 * [Text to Speech](https://console.ng.bluemix.net/catalog/text-to-speech/): To read the list of tweets
 * [Advanced Mobile Access](https://console.ng.bluemix.net/catalog/advanced-mobile-access/): To capture analytics and logs from mobile apps on the server
 
+I tested the latest version on iOS 9.0.1 and watchOS 2.0.
+
 
 Setup
 ================================================================================
