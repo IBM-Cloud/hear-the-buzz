@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>hearthebuzz WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>helloWorld_swift.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>49B2CFD71B0A7A5C005828EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>71996A211B9EFD8100590D46</key>
 		<dict>
 			<key>primary</key>
 			<true/>

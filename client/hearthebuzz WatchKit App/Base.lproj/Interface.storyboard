@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Buzz-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Buzz" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="hearthebuzz_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="1" alignment="center" text="Topic:" textAlignment="center" id="hfe-Kk-EDy">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <label width="1" alignment="center" text="bluemix" textAlignment="center" id="oUk-qG-QWE">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <button width="1" alignment="center" title="Positive" id="8FF-4c-4oF">
+                            <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="7xy-jS-cPf" kind="push" identifier="positive" id="WCs-RD-NOL"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" title="Negative" id="9tf-0G-bhd">
+                            <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="7xy-jS-cPf" kind="push" identifier="negative" id="cSG-Oy-LP3"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="topicLabel" destination="oUk-qG-QWE" id="raH-JB-9gq"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="63" y="350"/>
+        </scene>
+        <!--Tweets-->
+        <scene sceneID="erx-ld-GWu">
+            <objects>
+                <controller title="Tweets" id="7xy-jS-cPf" customClass="InterfaceControllerTweets" customModule="hearthebuzz_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Topic:" textAlignment="center" id="osP-M0-wBz">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <label alignment="center" text="bluemix" textAlignment="center" id="4c3-MC-uxg">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <separator alignment="left" id="Cfp-fy-F7c">
+                            <color key="color" red="0.40000000000000002" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <table alignment="left" id="GEm-Fz-B9U">
+                            <items>
+                                <tableRow identifier="cell" id="d99-fh-HZs" customClass="TweetRow" customModule="hearthebuzz_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="f7H-v4-y1x">
+                                        <items>
+                                            <label width="1" alignment="left" text="author" id="2fw-1x-Bjj">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                            <label width="1" alignment="left" text="title" numberOfLines="0" id="Tey-5H-40I">
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                            <separator alignment="left" id="HbN-bh-qQJ">
+                                                <color key="color" red="0.40000000000000002" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            </separator>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="authorLabel" destination="2fw-1x-Bjj" id="K8Z-tX-0VK"/>
+                                        <outlet property="titleLabel" destination="Tey-5H-40I" id="W8d-5U-hQx"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="interfaceTable" destination="GEm-Fz-B9U" id="EYo-Ft-vCM"/>
+                        <outlet property="selectedTopicLabel" destination="4c3-MC-uxg" id="46h-rG-I1L"/>
+                        <outlet property="topicLabel" destination="osP-M0-wBz" id="PRC-qG-MIM"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="284" y="348"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cSG-Oy-LP3"/>
+    </inferredMetricsTieBreakers>
+</document>

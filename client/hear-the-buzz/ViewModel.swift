@@ -43,7 +43,7 @@ class ViewModel {
             }
         }
         
-        let flags: NSCalendarUnit = .DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit
+        let flags: NSCalendarUnit = [.NSDayCalendarUnit, .NSMonthCalendarUnit, .NSYearCalendarUnit]
         let date = NSDate()
         let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
         let year:Int = components.year
@@ -72,14 +72,14 @@ class ViewModel {
         
         restUrl = restUrl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         restUrl = restUrl.stringByReplacingOccurrencesOfString(":", withString: "%3A");
-        restUrl = "http://" + restUrl
+        restUrl = "https://" + restUrl
         //println(restUrl)
         
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         let url = NSURL(string: restUrl)
         let task = session.dataTaskWithURL(url!) { (data, response, error) -> Void in
             let parser = JSONParser()
-            self.tweetsData = parser.titlesFromJSON(data)
+            self.tweetsData = parser.titlesFromJSON(data!)
             
             let logger = IMFLogger(forName:"hear-the-buzz")
             IMFLogger.setLogLevel(IMFLogLevel.Info)
@@ -101,7 +101,7 @@ class ViewModel {
     }
     
     func titleForItemAtIndexPath(indexPath: NSIndexPath) -> String {
-        var message:String = tweetsData[indexPath.row].message
+        let message:String = tweetsData[indexPath.row].message
         return message
     }
 }

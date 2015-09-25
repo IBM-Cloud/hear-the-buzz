@@ -1,11 +1,13 @@
 Hear the Buzz
 ================================================================================
 
-The [hear-the-buzz](https://github.com/IBM-Bluemix/hear-the-buzz) project contains a sample iPhone app which finds tweets with positive or negative sentiments for topics which users enter manually or via iOS speech recognition. After this users can read these tweets or listen to them.
+The [hear-the-buzz](https://github.com/IBM-Bluemix/hear-the-buzz) project contains a sample iPhone app which finds tweets with positive or negative sentiments for topics which users enter manually or via iOS speech recognition. After this users can read these tweets or listen to them. On Apple Watches users can read the buzz.
 
 Watch the [video](https://www.youtube.com/watch?v=QctwylG31XA) to see a demonstration of the app or have a look at the following screenshots.
 
 ![alt text](screenshots-combined.png "Hear the Buzz Screenshots")
+
+![alt text](screenshotswatch-combinded "Hear the Buzz Screenshots")
 
 [![Hear the Buzz Video](video.png)](http://www.youtube.com/watch?v=QctwylG31XA)
 
@@ -90,5 +92,27 @@ This will create/update an Xcode Workspace file. Open the "hear-the-buzz.xcworks
 Open the "Info.plist" file. You need to enter the Bundle Identifier, Backend_Route, and Backend_GUID values from the steps above. 
 
 ![alt text](xcode-small.png "Hear the Buzz")
+
+Note: If you want to use another bundle identifier than "com.ibm.test1" you need to change it in five different places.
+
+hear-the-buzz/Info.plist:
+
+```
+Bundle identifier: com.ibm.test1
+```
+
+hearthebuzz WatchKit App/Info.plist:
+
+```
+Bundle identifier: com.ibm.test1.watchkitapp
+WKCompanionAppBundleIdentifier: com.ibm.test1
+```
+
+hearthebuzz WatchKit Extension/Info.plist:
+
+```
+Bundle identifier: com.ibm.test1.watchkitextension
+NSExtension/NSExtensionAttributes/WKAppBundleIdentifier: com.ibm.test1.watchkitapp
+```
 
 Now you are all set! Launch the app either on a device or in the iOS Simulator using Xcode.

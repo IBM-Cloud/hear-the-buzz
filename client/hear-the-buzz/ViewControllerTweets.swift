@@ -14,7 +14,7 @@
 
 import Foundation
 
-class ViewControllerTweets: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewControllerTweets: UITableViewController {
     
     let audio = audioPlayer();
     
@@ -49,12 +49,12 @@ class ViewControllerTweets: UITableViewController, UITableViewDataSource, UITabl
                 }
                 message = message.stringByReplacingOccurrencesOfString("@", withString: "Twitter user ")
                 if message.lowercaseString.rangeOfString("http") != nil {
-                    var index = message.rangeOfString("http")?.startIndex
+                    let index = message.rangeOfString("http")?.startIndex
                     message = message.substringToIndex(index!)
                 }
                 if message.hasPrefix("RT") {
                     if message.rangeOfString(":") != nil {
-                        var index = message.rangeOfString(":")?.startIndex
+                        let index = message.rangeOfString(":")?.startIndex
                         message = message.substringFromIndex(index!)
                     }
                     message = message.stringByReplacingOccurrencesOfString(":", withString: "")
@@ -117,11 +117,12 @@ class ViewControllerTweets: UITableViewController, UITableViewDataSource, UITabl
             }
         }
         
-        myActivityIndiator.startAnimating()
+        //myActivityIndiator.startAnimating()
             
         viewModel.fetchTweets {
             dispatch_async(dispatch_get_main_queue()) {
                 self.tableView.reloadData()
+                
                 self.refreshControl?.endRefreshing()
                 
                 self.myActivityIndiator.stopAnimating()
@@ -140,6 +141,7 @@ class ViewControllerTweets: UITableViewController, UITableViewDataSource, UITabl
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell:TweetCellTableViewCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TweetCellTableViewCell
+        
         let tweet = self.viewModel.tweetsData[indexPath.row]
         
         cell.label.text = tweet.authorName
@@ -149,6 +151,7 @@ class ViewControllerTweets: UITableViewController, UITableViewDataSource, UITabl
         cell.loadImage(tweet.authorPictureUrl)
         
         return cell
+        
     }
     
     func configureCell(cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {

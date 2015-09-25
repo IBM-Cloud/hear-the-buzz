@@ -36,9 +36,9 @@ class TweetCellTableViewCell: UITableViewCell {
         let request: NSURLRequest = NSURLRequest(URL: imgageURL)
         NSURLConnection.sendAsynchronousRequest(
             request, queue: NSOperationQueue.mainQueue(),
-            completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+            completionHandler: {(response: NSURLResponse?,data: NSData?,error: NSError?) -> Void in
                 if error == nil {
-                    self.myImage.image = UIImage(data: data)
+                    self.myImage.image = UIImage(data: data!)
                 }
         })
     }

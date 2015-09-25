@@ -2,20 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Backend_Route</key>
-	<string>https://hear-the-buzz.mybluemix.net</string>
 	<key>Backend_GUID</key>
-	<string>e9955d52-6467-4d44-a2dc-65cee8885a43</string>
+	<string>195bbbb4-43ce-4011-881c-5f1c07a78e2e</string>
+	<key>Backend_Route</key>
+	<string>https://hear-the-buzz-discoid-pickin.mybluemix.net</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.heidloff.hearthebuzz</string>
+	<string>com.ibm.test1</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>hearthebuzz</string>
+	<string>Hear the Buzz</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -23,7 +23,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.0.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

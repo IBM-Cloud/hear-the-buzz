@@ -13,14 +13,22 @@
 		49B2CFD01B0A7A5B005828EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B2CFCF1B0A7A5B005828EF /* Images.xcassets */; };
 		49B2CFF11B0A8763005828EF /* bluemix_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B2CFEF1B0A8763005828EF /* bluemix_logo.png */; };
 		49B2CFF21B0A8763005828EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49B2CFF01B0A8763005828EF /* LaunchScreen.xib */; };
+		711CDB7F1B9F2BD7006D8D1D /* InterfaceControllerTweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711CDB7E1B9F2BD7006D8D1D /* InterfaceControllerTweets.swift */; };
 		717228031B9431D400FB9697 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717228021B9431D400FB9697 /* Tweet.swift */; };
 		717228051B943BF200FB9697 /* TweetCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717228041B943BF200FB9697 /* TweetCellTableViewCell.swift */; };
+		71996A1D1B9EFD8100590D46 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71996A1C1B9EFD8100590D46 /* InterfaceController.swift */; };
+		71996A1F1B9EFD8100590D46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71996A1E1B9EFD8100590D46 /* Images.xcassets */; };
+		71996A231B9EFD8100590D46 /* hearthebuzz WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 71996A221B9EFD8100590D46 /* hearthebuzz WatchKit App.app */; };
+		71996A2B1B9EFD8100590D46 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71996A291B9EFD8100590D46 /* Interface.storyboard */; };
+		71996A2D1B9EFD8100590D46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71996A2C1B9EFD8100590D46 /* Images.xcassets */; };
+		71996A301B9EFD8100590D46 /* hearthebuzz WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 71996A181B9EFD8100590D46 /* hearthebuzz WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		71B14B601B8F3ADE00D22844 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B14B5F1B8F3ADE00D22844 /* ViewModel.swift */; };
 		71B14B621B8F3B0D00D22844 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B14B611B8F3B0D00D22844 /* JSONParser.swift */; };
 		71B14B661B8F593900D22844 /* ViewControllerTweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B14B651B8F593900D22844 /* ViewControllerTweets.swift */; };
 		71B6D5161B9757BD00EC99D1 /* hear-the-buzzTests in Resources */ = {isa = PBXBuildFile; fileRef = 71B6D5151B9757BD00EC99D1 /* hear-the-buzzTests */; };
 		71BB94DB1B95E58700145045 /* audioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BB94DA1B95E58700145045 /* audioPlayer.m */; };
 		71C4021F1B98253B000E1912 /* IMFLoggerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C4021E1B98253B000E1912 /* IMFLoggerExtension.swift */; };
+		71F8E72F1BA04FD4009CD54F /* TweetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F8E72E1BA04FD4009CD54F /* TweetRow.swift */; };
 		EC54AC89FAD001985CF6758C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6E41F285643DD194A2BF43 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +40,35 @@
 			remoteGlobalIDString = 49B2CFC21B0A7A5B005828EF;
 			remoteInfo = helloWorld_swift;
 		};
+		71996A241B9EFD8100590D46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49B2CFBB1B0A7A5B005828EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71996A211B9EFD8100590D46;
+			remoteInfo = "hearthebuzz WatchKit App";
+		};
+		71996A2E1B9EFD8100590D46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49B2CFBB1B0A7A5B005828EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71996A171B9EFD8100590D46;
+			remoteInfo = "hearthebuzz WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		71996A371B9EFD8100590D46 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				71996A301B9EFD8100590D46 /* hearthebuzz WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1951EA8CC37DC85F3EC678F0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -45,8 +81,17 @@
 		49B2CFE81B0A7D61005828EF /* hear-the-buzz-swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hear-the-buzz-swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		49B2CFEF1B0A8763005828EF /* bluemix_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluemix_logo.png; sourceTree = "<group>"; };
 		49B2CFF01B0A8763005828EF /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		711CDB7E1B9F2BD7006D8D1D /* InterfaceControllerTweets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceControllerTweets.swift; sourceTree = "<group>"; };
 		717228021B9431D400FB9697 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		717228041B943BF200FB9697 /* TweetCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCellTableViewCell.swift; sourceTree = "<group>"; };
+		71996A181B9EFD8100590D46 /* hearthebuzz WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "hearthebuzz WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71996A1B1B9EFD8100590D46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71996A1C1B9EFD8100590D46 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		71996A1E1B9EFD8100590D46 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		71996A221B9EFD8100590D46 /* hearthebuzz WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hearthebuzz WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71996A281B9EFD8100590D46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71996A2A1B9EFD8100590D46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		71996A2C1B9EFD8100590D46 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		71B14B5F1B8F3ADE00D22844 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		71B14B611B8F3B0D00D22844 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		71B14B651B8F593900D22844 /* ViewControllerTweets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTweets.swift; sourceTree = "<group>"; };
@@ -56,6 +101,7 @@
 		71C4021C1B981A6A000E1912 /* Buzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C4021D1B981A6A000E1912 /* hear-the-buzzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hear-the-buzzTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C4021E1B98253B000E1912 /* IMFLoggerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMFLoggerExtension.swift; sourceTree = "<group>"; };
+		71F8E72E1BA04FD4009CD54F /* TweetRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetRow.swift; sourceTree = "<group>"; };
 		DB6E41F285643DD194A2BF43 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,6 +115,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		49B2CFD51B0A7A5C005828EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71996A151B9EFD8100590D46 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,9 +146,13 @@
 				49B2CFC51B0A7A5B005828EF /* hear-the-buzz */,
 				71B6D5151B9757BD00EC99D1 /* hear-the-buzzTests */,
 				0D79D050D306939CFDBA53F3 /* Pods */,
+				71996A191B9EFD8100590D46 /* hearthebuzz WatchKit Extension */,
+				71996A261B9EFD8100590D46 /* hearthebuzz WatchKit App */,
 				FC3D853A901AF541EE718148 /* Frameworks */,
 				71C4021C1B981A6A000E1912 /* Buzz.app */,
 				71C4021D1B981A6A000E1912 /* hear-the-buzzTests.xctest */,
+				71996A181B9EFD8100590D46 /* hearthebuzz WatchKit Extension.appex */,
+				71996A221B9EFD8100590D46 /* hearthebuzz WatchKit App.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +187,44 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		71996A191B9EFD8100590D46 /* hearthebuzz WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				71996A291B9EFD8100590D46 /* Interface.storyboard */,
+				71996A1C1B9EFD8100590D46 /* InterfaceController.swift */,
+				711CDB7E1B9F2BD7006D8D1D /* InterfaceControllerTweets.swift */,
+				71F8E72E1BA04FD4009CD54F /* TweetRow.swift */,
+				71996A1E1B9EFD8100590D46 /* Images.xcassets */,
+				71996A1A1B9EFD8100590D46 /* Supporting Files */,
+			);
+			path = "hearthebuzz WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		71996A1A1B9EFD8100590D46 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				71996A1B1B9EFD8100590D46 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71996A261B9EFD8100590D46 /* hearthebuzz WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				71996A2C1B9EFD8100590D46 /* Images.xcassets */,
+				71996A271B9EFD8100590D46 /* Supporting Files */,
+			);
+			path = "hearthebuzz WatchKit App";
+			sourceTree = "<group>";
+		};
+		71996A271B9EFD8100590D46 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				71996A281B9EFD8100590D46 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		FC3D853A901AF541EE718148 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,10 +245,12 @@
 				49B2CFC01B0A7A5B005828EF /* Frameworks */,
 				49B2CFC11B0A7A5B005828EF /* Resources */,
 				0296F8E9D2E50BEB687C64A7 /* Copy Pods Resources */,
+				71996A371B9EFD8100590D46 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				71996A2F1B9EFD8100590D46 /* PBXTargetDependency */,
 			);
 			name = "hear-the-buzz";
 			productName = helloWorld_swift;
@@ -178,20 +275,68 @@
 			productReference = 71C4021D1B981A6A000E1912 /* hear-the-buzzTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		71996A171B9EFD8100590D46 /* hearthebuzz WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71996A361B9EFD8100590D46 /* Build configuration list for PBXNativeTarget "hearthebuzz WatchKit Extension" */;
+			buildPhases = (
+				71996A141B9EFD8100590D46 /* Sources */,
+				71996A151B9EFD8100590D46 /* Frameworks */,
+				71996A161B9EFD8100590D46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71996A251B9EFD8100590D46 /* PBXTargetDependency */,
+			);
+			name = "hearthebuzz WatchKit Extension";
+			productName = "hearthebuzz WatchKit Extension";
+			productReference = 71996A181B9EFD8100590D46 /* hearthebuzz WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		71996A211B9EFD8100590D46 /* hearthebuzz WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71996A351B9EFD8100590D46 /* Build configuration list for PBXNativeTarget "hearthebuzz WatchKit App" */;
+			buildPhases = (
+				71996A201B9EFD8100590D46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "hearthebuzz WatchKit App";
+			productName = "hearthebuzz WatchKit App";
+			productReference = 71996A221B9EFD8100590D46 /* hearthebuzz WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		49B2CFBB1B0A7A5B005828EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					49B2CFC21B0A7A5B005828EF = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = PP64RT7P8Z;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					49B2CFD71B0A7A5C005828EF = {
 						CreatedOnToolsVersion = 6.3;
+					};
+					71996A171B9EFD8100590D46 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					71996A211B9EFD8100590D46 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = PP64RT7P8Z;
 					};
 				};
 			};
@@ -210,6 +355,8 @@
 			targets = (
 				49B2CFC21B0A7A5B005828EF /* hear-the-buzz */,
 				49B2CFD71B0A7A5C005828EF /* hear-the-buzzTests */,
+				71996A171B9EFD8100590D46 /* hearthebuzz WatchKit Extension */,
+				71996A211B9EFD8100590D46 /* hearthebuzz WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -231,6 +378,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71996A161B9EFD8100590D46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71996A1F1B9EFD8100590D46 /* Images.xcassets in Resources */,
+				71996A231B9EFD8100590D46 /* hearthebuzz WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71996A201B9EFD8100590D46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71996A2B1B9EFD8100590D46 /* Interface.storyboard in Resources */,
+				71996A2D1B9EFD8100590D46 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +458,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		71996A141B9EFD8100590D46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71996A1D1B9EFD8100590D46 /* InterfaceController.swift in Sources */,
+				711CDB7F1B9F2BD7006D8D1D /* InterfaceControllerTweets.swift in Sources */,
+				71F8E72F1BA04FD4009CD54F /* TweetRow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -300,6 +475,16 @@
 			isa = PBXTargetDependency;
 			target = 49B2CFC21B0A7A5B005828EF /* hear-the-buzz */;
 			targetProxy = 49B2CFD91B0A7A5C005828EF /* PBXContainerItemProxy */;
+		};
+		71996A251B9EFD8100590D46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71996A211B9EFD8100590D46 /* hearthebuzz WatchKit App */;
+			targetProxy = 71996A241B9EFD8100590D46 /* PBXContainerItemProxy */;
+		};
+		71996A2F1B9EFD8100590D46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71996A171B9EFD8100590D46 /* hearthebuzz WatchKit Extension */;
+			targetProxy = 71996A2E1B9EFD8100590D46 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -310,6 +495,15 @@
 				49B2CFCD1B0A7A5B005828EF /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		71996A291B9EFD8100590D46 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71996A2A1B9EFD8100590D46 /* Base */,
+			);
+			name = Interface.storyboard;
+			path = "../hearthebuzz WatchKit App";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -403,9 +597,14 @@
 			baseConfigurationReference = 367974EA6C1370457CC50FD3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "hear-the-buzz/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Buzz;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "hear-the-buzz/hear-the-buzz-swift-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -416,9 +615,14 @@
 			baseConfigurationReference = 1951EA8CC37DC85F3EC678F0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "hear-the-buzz/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Buzz;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "hear-the-buzz/hear-the-buzz-swift-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -454,6 +658,70 @@
 			};
 			name = Release;
 		};
+		71996A311B9EFD8100590D46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "hearthebuzz WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		71996A321B9EFD8100590D46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "hearthebuzz WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		71996A331B9EFD8100590D46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = hearthebuzz_WatchKit_Extension;
+				INFOPLIST_FILE = "hearthebuzz WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		71996A341B9EFD8100590D46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				IBSC_MODULE = hearthebuzz_WatchKit_Extension;
+				INFOPLIST_FILE = "hearthebuzz WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -480,6 +748,24 @@
 			buildConfigurations = (
 				49B2CFE61B0A7A5C005828EF /* Debug */,
 				49B2CFE71B0A7A5C005828EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71996A351B9EFD8100590D46 /* Build configuration list for PBXNativeTarget "hearthebuzz WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71996A331B9EFD8100590D46 /* Debug */,
+				71996A341B9EFD8100590D46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71996A361B9EFD8100590D46 /* Build configuration list for PBXNativeTarget "hearthebuzz WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71996A311B9EFD8100590D46 /* Debug */,
+				71996A321B9EFD8100590D46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

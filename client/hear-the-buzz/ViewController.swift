@@ -22,6 +22,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var topic: UITextField!
     
+    @IBAction func topicChanged(sender: AnyObject) {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let newTopic = topic.text
+        appDelegate.topic = newTopic!
+    }
+    
     @IBAction func clearText(sender: AnyObject) {
         topic.text = ""
     }
@@ -40,7 +47,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var topicValue = topic.text
+        let topicValue = topic.text
         (segue.destinationViewController as! ViewControllerTweets).topic = topicValue
         if segue.identifier == "Positive" {
             (segue.destinationViewController as! ViewControllerTweets).sentiment = "Positive"

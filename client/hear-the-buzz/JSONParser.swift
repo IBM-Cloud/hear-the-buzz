@@ -18,16 +18,16 @@ class JSONParser {
     func titlesFromJSON(data: NSData) -> [Tweet] {
         var titles = [String]()
         var tweetsData = [Tweet]()
-        var jsonError: NSError?
         
-        if let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError) as? [String: AnyObject],
-            tweets = json["tweets"] as? [[String: AnyObject]] {
-            for tweet in tweets {
+        do {
+            let json = try NSJSONSerialization.JSONObjectWithData(data, options: [])
+            let tweets = json["tweets"] as? [[String: AnyObject]]
+            for tweet in tweets! {
                 if let message = tweet["message"] as? [String: AnyObject],
                     body = message["body"] as? String {
                         
                         titles.append(body)
-                        var tweetData:Tweet = Tweet();
+                        let tweetData:Tweet = Tweet();
                         tweetData.message = body
                         tweetData.message = tweetData.message.stringByReplacingOccurrencesOfString("\n", withString: "")
                         
@@ -47,12 +47,10 @@ class JSONParser {
                         tweetsData.append(tweetData)
                 }
             }
-        } else {
-            if let jsonError = jsonError {
-                let logger = IMFLogger(forName:"hear-the-buzz")
-                IMFLogger.setLogLevel(IMFLogLevel.Info)
-                logger.logInfoWithMessages("Error when parsing JSON from Twitter: \(jsonError)")
-            }
+        } catch {
+            let logger = IMFLogger(forName:"hear-the-buzz")
+            IMFLogger.setLogLevel(IMFLogLevel.Info)
+            logger.logInfoWithMessages("Error when parsing JSON from Twitter: \(error)")
         }
         
         return tweetsData
