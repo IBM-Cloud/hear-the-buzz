@@ -19,30 +19,25 @@ import SpriteKit
 import AVFoundation
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet weak var topic: UITextField!
     
     @IBAction func topicChanged(sender: AnyObject) {
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-<<<<<<< HEAD
         let newTopic = topic.text
         appDelegate.topic = newTopic!
-=======
-        var newTopic = topic.text
-        appDelegate.topic = newTopic
->>>>>>> origin/master
     }
     
     @IBAction func clearText(sender: AnyObject) {
         topic.text = ""
     }
- 
+    
     @IBOutlet weak var clearButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         self.topic.delegate = self;
     }
     
@@ -64,11 +59,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             (segue.destinationViewController as! ViewControllerTweets).sentiment = "Negative"
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
-
 
 

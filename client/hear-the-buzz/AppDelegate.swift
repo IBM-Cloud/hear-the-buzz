@@ -16,9 +16,9 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         let backend_GUID = NSBundle.mainBundle().objectForInfoDictionaryKey("Backend_GUID") as! String
@@ -26,52 +26,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IMFClient.sharedInstance().initializeWithBackendRoute(backend_Route, backendGUID: backend_GUID)
         return true
     }
-
+    
     func applicationWillResignActive(application: UIApplication) {
     }
-
+    
     func applicationDidEnterBackground(application: UIApplication) {
     }
-
+    
     func applicationWillEnterForeground(application: UIApplication) {
     }
-
+    
     func applicationDidBecomeActive(application: UIApplication) {
     }
-
+    
     func applicationWillTerminate(application: UIApplication) {
     }
     
     var topic:String = "bluemix"
     
-<<<<<<< HEAD
     func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]!, reply: (([NSObject : AnyObject]?) -> Void)) {
         
         let sentimentObject: AnyObject? = userInfo["sentiment"]
         let topicObject: AnyObject? = userInfo["topic"]
         if sentimentObject != nil {
             let sentimentString = sentimentObject as! String
-=======
-    func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]!, reply: (([NSObject : AnyObject]!) -> Void)!) {
-        
-        var sentimentObject: AnyObject? = userInfo["sentiment"]
-        var topicObject: AnyObject? = userInfo["topic"]
-        if sentimentObject != nil {
-            var sentimentString = sentimentObject as! String
->>>>>>> origin/master
             let viewModel = ViewModel()
             viewModel.sentiment = sentimentString
             viewModel.topic = self.topic
-        
+            
             viewModel.fetchTweets {
                 dispatch_async(dispatch_get_main_queue()) {
                     var output = Dictionary<String,String>()
-<<<<<<< HEAD
                     let tweets:[Tweet]? = viewModel.tweetsData
-=======
-                    var tweets:[Tweet]? = viewModel.tweetsData
->>>>>>> origin/master
-                
+                    
                     if (tweets != nil) {
                         var tweetsData:[Tweet] = tweets!
                         for (var i = 0; i < tweetsData.count; i++) {
@@ -80,19 +67,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             
                             var message = tweetsData[i].message
                             if message.lowercaseString.rangeOfString("http") != nil {
-<<<<<<< HEAD
                                 let index = message.rangeOfString("http")?.startIndex
                                 message = message.substringToIndex(index!)
                             }
                             if message.lowercaseString.rangeOfString("https") != nil {
                                 let index = message.rangeOfString("https")?.startIndex
-=======
-                                var index = message.rangeOfString("http")?.startIndex
-                                message = message.substringToIndex(index!)
-                            }
-                            if message.lowercaseString.rangeOfString("https") != nil {
-                                var index = message.rangeOfString("https")?.startIndex
->>>>>>> origin/master
                                 message = message.substringToIndex(index!)
                             }
                             output["tweet" + number.stringValue + ".message"] = message
@@ -110,4 +89,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 }
-
