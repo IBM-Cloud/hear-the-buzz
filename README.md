@@ -7,11 +7,7 @@ Watch the [video](https://www.youtube.com/watch?v=QctwylG31XA) to see a demonstr
 
 ![alt text](screenshots-combined.png "Hear the Buzz Screenshots")
 
-<<<<<<< HEAD
-![alt text](screenshotswatch-combinded "Hear the Buzz Screenshots")
-=======
 ![alt text](screenshotswatch-combinded.png "Hear the Buzz Screenshots")
->>>>>>> origin/master
 
 [![Hear the Buzz Video](video.png)](http://www.youtube.com/watch?v=QctwylG31XA)
 
@@ -21,8 +17,7 @@ Technically [IBM Bluemix](https://bluemix.net) is used to host the backend funct
 * [Text to Speech](https://console.ng.bluemix.net/catalog/text-to-speech/): To read the list of tweets
 * [Advanced Mobile Access](https://console.ng.bluemix.net/catalog/advanced-mobile-access/): To capture analytics and logs from mobile apps on the server
 
-I tested the latest version on iOS 9.0.1 and watchOS 2.0.
-
+I tested the app with iOS 9.0.1 and watchOS 2.0.
 
 Setup
 ================================================================================
