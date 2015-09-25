@@ -1,2 +1,4 @@
 /client/Pods/
+/client/hear-the-buzz.xcworkspace/xcshareddata
+/client/hear-the-buzz.xcworkspace/xcuserdata
 /server/node_modules/

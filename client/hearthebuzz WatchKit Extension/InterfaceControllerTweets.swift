@@ -27,7 +27,11 @@ class InterfaceControllerTweets: WKInterfaceController {
         super.awakeWithContext(context)
         
         var segue = (context as! NSDictionary)["segue"] as? String
+<<<<<<< HEAD
         let data = (context as! NSDictionary)["data"] as? String
+=======
+        var data = (context as! NSDictionary)["data"] as? String
+>>>>>>> origin/master
         
         self.setTitle("Buzz")
         
@@ -36,25 +40,43 @@ class InterfaceControllerTweets: WKInterfaceController {
 
     override func willActivate() {
         super.willActivate()
+<<<<<<< HEAD
             let dictionary = NSDictionary(objects: [sentimentString], forKeys: ["sentiment"])
             
             WKInterfaceController.openParentApplication(dictionary as [NSObject : AnyObject], reply: { (replyInfo, error) -> Void in
                 
                 let dictionary = replyInfo as NSDictionary
+=======
+            var dictionary = NSDictionary(objects: [sentimentString], forKeys: ["sentiment"])
+            
+            WKInterfaceController.openParentApplication(dictionary as [NSObject : AnyObject], reply: { (replyInfo, error) -> Void in
+                
+                var dictionary = replyInfo as NSDictionary
+>>>>>>> origin/master
                 replyInfo.count
                 self.interfaceTable.setNumberOfRows(replyInfo.count / 2 - 1, withRowType: "cell")
                 
                 for (var i = 0; i < replyInfo.count / 2 - 1; i++) {
                     let number = i as NSNumber
+<<<<<<< HEAD
                     let row: TweetRow = self.interfaceTable.rowControllerAtIndex(i) as! TweetRow
+=======
+                    var row: TweetRow = self.interfaceTable.rowControllerAtIndex(i) as! TweetRow
+>>>>>>> origin/master
                     
                     row.titleLabel.setText(dictionary["tweet" + number.stringValue + ".message"] as! String)
                     row.authorLabel.setText(dictionary["tweet" + number.stringValue + ".authorName"] as! String)
                 }
                 
+<<<<<<< HEAD
                 let topicObject: AnyObject? = replyInfo["topic"]
                 if topicObject != nil {
                     let dictionary = replyInfo as NSDictionary
+=======
+                var topicObject: AnyObject? = replyInfo["topic"]
+                if topicObject != nil {
+                    var dictionary = replyInfo as NSDictionary
+>>>>>>> origin/master
                     self.selectedTopicLabel.setText(dictionary["topic"] as! String)
                 }
             })

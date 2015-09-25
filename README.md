@@ -7,7 +7,11 @@ Watch the [video](https://www.youtube.com/watch?v=QctwylG31XA) to see a demonstr
 
 ![alt text](screenshots-combined.png "Hear the Buzz Screenshots")
 
+<<<<<<< HEAD
 ![alt text](screenshotswatch-combinded "Hear the Buzz Screenshots")
+=======
+![alt text](screenshotswatch-combinded.png "Hear the Buzz Screenshots")
+>>>>>>> origin/master
 
 [![Hear the Buzz Video](video.png)](http://www.youtube.com/watch?v=QctwylG31XA)
 

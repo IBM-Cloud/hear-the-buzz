@@ -44,12 +44,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var topic:String = "bluemix"
     
+<<<<<<< HEAD
     func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]!, reply: (([NSObject : AnyObject]?) -> Void)) {
         
         let sentimentObject: AnyObject? = userInfo["sentiment"]
         let topicObject: AnyObject? = userInfo["topic"]
         if sentimentObject != nil {
             let sentimentString = sentimentObject as! String
+=======
+    func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]!, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        
+        var sentimentObject: AnyObject? = userInfo["sentiment"]
+        var topicObject: AnyObject? = userInfo["topic"]
+        if sentimentObject != nil {
+            var sentimentString = sentimentObject as! String
+>>>>>>> origin/master
             let viewModel = ViewModel()
             viewModel.sentiment = sentimentString
             viewModel.topic = self.topic
@@ -57,7 +66,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             viewModel.fetchTweets {
                 dispatch_async(dispatch_get_main_queue()) {
                     var output = Dictionary<String,String>()
+<<<<<<< HEAD
                     let tweets:[Tweet]? = viewModel.tweetsData
+=======
+                    var tweets:[Tweet]? = viewModel.tweetsData
+>>>>>>> origin/master
                 
                     if (tweets != nil) {
                         var tweetsData:[Tweet] = tweets!
@@ -67,11 +80,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             
                             var message = tweetsData[i].message
                             if message.lowercaseString.rangeOfString("http") != nil {
+<<<<<<< HEAD
                                 let index = message.rangeOfString("http")?.startIndex
                                 message = message.substringToIndex(index!)
                             }
                             if message.lowercaseString.rangeOfString("https") != nil {
                                 let index = message.rangeOfString("https")?.startIndex
+=======
+                                var index = message.rangeOfString("http")?.startIndex
+                                message = message.substringToIndex(index!)
+                            }
+                            if message.lowercaseString.rangeOfString("https") != nil {
+                                var index = message.rangeOfString("https")?.startIndex
+>>>>>>> origin/master
                                 message = message.substringToIndex(index!)
                             }
                             output["tweet" + number.stringValue + ".message"] = message

@@ -26,6 +26,7 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         
+<<<<<<< HEAD
         let dictionary = NSDictionary(objects: ["topic"], forKeys: ["topic"])
         
         WKInterfaceController.openParentApplication(dictionary as [NSObject : AnyObject], reply: { (replyInfo, error) -> Void in
@@ -33,6 +34,15 @@ class InterfaceController: WKInterfaceController {
             let topicObject: AnyObject? = replyInfo["topic"]
             if topicObject != nil {
                 let dictionary = replyInfo as NSDictionary
+=======
+        var dictionary = NSDictionary(objects: ["topic"], forKeys: ["topic"])
+        
+        WKInterfaceController.openParentApplication(dictionary as [NSObject : AnyObject], reply: { (replyInfo, error) -> Void in
+            
+            var topicObject: AnyObject? = replyInfo["topic"]
+            if topicObject != nil {
+                var dictionary = replyInfo as NSDictionary
+>>>>>>> origin/master
                 self.topicLabel.setText(dictionary["topic"] as! String)
             }
         })
