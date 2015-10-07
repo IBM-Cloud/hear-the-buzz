@@ -21,6 +21,12 @@ class InterfaceControllerTweets: WKInterfaceController {
     @IBOutlet weak var selectedTopicLabel: WKInterfaceLabel!
     @IBOutlet weak var interfaceTable: WKInterfaceTable!
     
+    
+    @IBAction func playAudio() {
+        self.setTitle("Audio")
+    
+    }
+    
     var sentimentString:String = ""
     
     override func awakeWithContext(context: AnyObject?) {

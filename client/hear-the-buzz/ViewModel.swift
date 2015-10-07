@@ -67,13 +67,12 @@ class ViewModel {
         restUrl = restUrl + yearNumber.stringValue + "-" + monthString + "-" + dayString;
         let logger = IMFLogger(forName:"hear-the-buzz")
         IMFLogger.setLogLevel(IMFLogLevel.Info)
-        logger.logInfoWithMessages("Twitter REST URL: ")
-        logger.logInfoWithMessages("http://" + restUrl)
+        logger.logInfoWithMessages("Twitter REST URL: " + "https://" + restUrl)
         
         restUrl = restUrl.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         restUrl = restUrl.stringByReplacingOccurrencesOfString(":", withString: "%3A");
         restUrl = "https://" + restUrl
-        //println(restUrl)
+        //print(restUrl)
         
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         let url = NSURL(string: restUrl)
@@ -81,11 +80,9 @@ class ViewModel {
             let parser = JSONParser()
             self.tweetsData = parser.titlesFromJSON(data!)
             
-            let logger = IMFLogger(forName:"hear-the-buzz")
-            IMFLogger.setLogLevel(IMFLogLevel.Info)
-            logger.logInfoWithMessages("Tweets: ")
+            print("Tweets: ")
             for tweet in self.tweetsData {
-                logger.logInfoWithMessages(tweet.message)
+                print(tweet.message)
             }
             success()
         }

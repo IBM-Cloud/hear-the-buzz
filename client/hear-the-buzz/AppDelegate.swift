@@ -31,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidEnterBackground(application: UIApplication) {
+        IMFLogger.send() 
+        IMFAnalytics.sharedInstance().sendPersistedLogs()
     }
     
     func applicationWillEnterForeground(application: UIApplication) {

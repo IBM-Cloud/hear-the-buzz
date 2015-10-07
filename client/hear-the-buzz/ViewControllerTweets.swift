@@ -71,8 +71,7 @@ class ViewControllerTweets: UITableViewController {
                
         let logger = IMFLogger(forName:"hear-the-buzz")
         IMFLogger.setLogLevel(IMFLogLevel.Info)
-        logger.logInfoWithMessages("Text to be sent to Watson: ")
-        logger.logInfoWithMessages(text as String)
+        logger.logInfoWithMessages("Text to be sent to Watson: " + (text as String))
         
         audio.playSynthesizedAudio(text as String)
     }
